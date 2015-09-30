@@ -11,6 +11,22 @@ var settings = [],
     total_new = 0,
     is_mozilla_theme;
 
+
+var _ = {
+    storage: {
+        save: function (option, value, fun) {
+            fun=fun||function(){};
+            chrome.extension.sendRequest({ cmd: "set", name: option, value: value }, fun);
+        },
+        request: function (option, fun) {
+            chrome.extension.sendRequest({ cmd: "get", name: option }, fun);
+        }
+    },
+    getImage: function (src, fun) {
+        fun(src);
+    }
+}
+
 /** Get the bug ID **/
 
 bug_id = $('title').text().match(/^(?:Bug )?([0-9]+)/);

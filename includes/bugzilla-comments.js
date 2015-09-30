@@ -16,8 +16,10 @@ function initHighlightRA() {
     var assignee = document.querySelector(selector).textContent;
 
     var reporter = false;
-    for (var field of document.querySelectorAll('.field_label')) {
-        if (field.textContent.contains('Reported')) {
+    var fields=document.querySelectorAll('.field_label');
+    for (var i in fields) {
+        var field=fields[i];
+        if (field.textContent.indexOf('Reported') != -1) {
             reporter = field.nextElementSibling.querySelector('.vcard .fn').
                 textContent;
             break;

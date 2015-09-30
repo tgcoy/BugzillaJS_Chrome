@@ -3,7 +3,7 @@
 /* global registerPref, ifBug, hex_md5 */
 
 registerPref('gravatar', {'title': 'Show gravatars in comments',
-                          'setting_default': true,
+                          'setting_default': false,
                           'callback': ifBug(setGravatars),
                           'category': 'inline'});
 

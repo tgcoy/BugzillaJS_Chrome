@@ -1,0 +1,50 @@
+﻿{
+	"manifest_version": 2,
+	"name": "BugzillaJS",
+	"version": "3.4.1",
+	"description": "Add features to Bugzilla.",
+	"permissions": [
+		"tabs",
+		"*://*/bugzilla/*",
+		"https://bugzilla.mozilla.org/*"
+	],
+	"background":{
+		"persistent": true,
+      	"scripts": [ 
+			"jquery.js",
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/bugzilla/*",
+				"https://bugzilla.mozilla.org/*"
+			],
+			"css": [
+				"style.css",
+				"bugzilla-agile.css"
+			],
+			"js": [
+				"jquery.js",
+				"jquery.scrollTo.js",
+				"jquery.flot.js",
+				"jquery.flot.pie.js",
+				"md5.js",
+				"bugzilla-defs.js",
+				"bugzilla.js",
+				"bugzilla-date.js",
+				"bugzilla-images.js",
+				"bugzilla-listingpage.js",
+				"bugzilla-git.js",
+        		"bugzilla-gravatars.js",
+				"bugzilla-comments.js",
+				"bugzilla-misc.js",
+				"bugzilla-agile.js",
+				"bugzilla-keyboard.js",
+				"bugzilla-treeherder.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
