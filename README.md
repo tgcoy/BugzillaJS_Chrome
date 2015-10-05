@@ -1,23 +1,10 @@
 # DOWNLOAD THE ADD-ON
 
-https://addons.mozilla.org/en-US/firefox/addon/bugzillajs/
+https://raw.githubusercontent.com/tgcoy/BugzillaJS_Chrome/master/BugzillaJS.crx
 
-# DEVELOPING THE ADD-ON (OSX Only!)
+# DEVELOPING THIS EXTENSION
 
-BugzillaJS requires Omnium (cross-browser pagemods), and can be installed
-like this:
-
-    git clone git@github.com:gkoberger/omnium.git --recursive
-    cd omnium
-    npm install
-
-    git clone git@github.com:gkoberger/BugzillaJS.git bugzillajs
-    ./builder.js bugzillajs
-
-This should open up an install button in Firefox.
-
-Omnium is just a wrapper that I use to generate XPI files.  It takes care of
-figuring out all the page-mod logic.
+use chrome dev tools
 
 # TESTING THE ADD-ON
 
